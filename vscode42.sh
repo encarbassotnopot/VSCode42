@@ -5,7 +5,11 @@ mkdir -p ~/.local/share/vscode/
 tar xvzf /tmp/code.tar.gz -C ~/.local/share/vscode/ --strip-components=1
 mkdir -p ~/.local/share/icons/hicolor/
 cp ~/.local/share/vscode/resources/app/out/media/code-icon.svg ~/.local/share/icons/hicolor/
-
+grep -q '^export PATH=$PATH:$HOME/.local/share/vscode/' ~/.zshrc
+if [ $? -eq 1 ]; then
+	echo '# VSCode path' >> ~/.zshrc
+	echo 'export PATH=$PATH:$HOME/.local/share/vscode/' >> ~/.zshrc
+fi
 cat <<EOF > $HOME/.local/share/applications/vscode.desktop
 [Desktop Entry]
 Name=Visual Studio Code
