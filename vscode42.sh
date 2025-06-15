@@ -19,14 +19,15 @@ Exec=$HOME/.local/share/vscode/code %F
 Icon=$HOME/.local/share/icons/hicolor/code-icon.svg
 Type=Application
 StartupNotify=false
-StartupWMClass=vscode
+StartupWMClass=Code
 Categories=TextEditor;Development;IDE;
-MimeType=application/x-vscode-workspace;
+MimeType=application/x-code-workspace;
 Actions=new-empty-window;
 Keywords=vscode;
 
 [Desktop Action new-empty-window]
 Name=New Empty Window
+Name[cs]=Nové prázdné okno
 Name[de]=Neues leeres Fenster
 Name[es]=Nueva ventana vacía
 Name[fr]=Nouvelle fenêtre vide
